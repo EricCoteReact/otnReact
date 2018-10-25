@@ -33,6 +33,16 @@ export default class Todos extends Component {
     ))
   );
 
+  deleteTodo = (id)  => {
+    this.setState ({      
+              todos: this.state.todos.filter(
+                  todo => (todo.id !== id)
+              ) 
+    });
+  };
+
+
+
   changeFilter = (filter) => (
     this.setState({visibilityFilter: filter}));
 
@@ -60,7 +70,8 @@ export default class Todos extends Component {
       <VisibleTodoList 
               todos={this.state.todos}
               visibilityFilter={this.state.visibilityFilter} 
-              onToggleTodo={this.toggleTodo} />
+              onToggleTodo={this.toggleTodo}
+              onDelete= {this.deleteTodo} />
      </div>
 
   );

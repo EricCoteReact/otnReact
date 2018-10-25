@@ -19,6 +19,7 @@ const getVisibleTodos = (todos, filter) => {
 const VisibleTodoList = (props) => (
   <TodoList todos={getVisibleTodos(props.todos,props.visibilityFilter)} 
             onToggleTodo={props.onToggleTodo}
+            onDelete={props.onDelete}
             
   />
 ); 

@@ -5,8 +5,13 @@ import { FaBackspace } from 'react-icons/fa';
 
  class EmployeeTable extends React.Component{
     editEmp(id) {
-        this.props.history.push(`/list/${id}`)
+        this.props.history.push(`/list/${id}`);
     } 
+
+    deleteEmp(e,id) {
+        e.stopPropagation();
+        this.props.onDelete(id);
+    }
 
 
     render() { 
@@ -27,7 +32,8 @@ import { FaBackspace } from 'react-icons/fa';
                             <td style={{cursor: "pointer"}} >{emp.firstName}</td> 
                             <td style={{cursor: "pointer"}} >{emp.lastName}</td>
                             <td >
-                                <button className="text-button"   >
+                                <button className="text-button"
+                                        onClick={(e)=>this.deleteEmp(e,emp.id)}   >
                                     <FaBackspace size='1.5em'  />
                                 </button>
                             </td>

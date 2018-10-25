@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Form, Input, Button,FormGroup, FormFeedback} from 'reactstrap'
 
-
+const firstName=React.createRef();
 
 export default function EmployeeForm (props) {
     return (
@@ -15,7 +15,8 @@ export default function EmployeeForm (props) {
                id="firstName"
                placeholder="First Name"
                value={props.firstName}
-               onChange={props.onChange} 
+               onChange={props.onChange}
+              
                invalid={!!props.formErrors.firstName}
                />
             <FormFeedback >{props.formErrors.firstName}</FormFeedback> 
