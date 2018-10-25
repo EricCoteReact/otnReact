@@ -20,7 +20,7 @@ function AddTodo ({ dispatch })  {
       >
         <Input innerRef={_input} 
                className="mr-2" />
-        <Button type="submit">
+        <Button color="primary" >
           Add Todo
         </Button>
       </Form>

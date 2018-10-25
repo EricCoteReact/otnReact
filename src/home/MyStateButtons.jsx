@@ -31,7 +31,7 @@ export default class MyStateButtons extends React.Component {
         return (
         <>
           <h1>My Buttons</h1>
-          <Button color="primary" onClick={this.toggleTimer} >Toggle Timer</Button>
+          <Button color="primary" className="mx-3" onClick={this.toggleTimer} >Toggle Timer</Button>
           <MyButton number="1"   onClick={this.increase} />
           <MyButton number="10"  onClick={this.increase} />
           <MyButton number="100" onClick={this.increase} />

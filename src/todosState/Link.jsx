@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {Button} from 'reactstrap';
 
 const  Link = ({ active, children, onClick }) => (
-  <Button
+  <Button color="primary"
      onClick={onClick}
      disabled={active} >
     {children}

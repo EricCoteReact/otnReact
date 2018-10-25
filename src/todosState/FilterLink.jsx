@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Link from './Link';
 
 const FilterLink = (props) => (
-  <Link active={(props.filter === props.visibilityFilter)}
+  <Link  active={(props.filter === props.visibilityFilter)}
     onClick={() => (props.onChangeFilter(props.filter))}
   >{props.children}</Link>
 );

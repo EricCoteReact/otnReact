@@ -7,7 +7,7 @@ import Reddits from "./reddit/Reddits";
 import NotFound from './404';
 import MyMenu from './MyMenu';
 import Footer from './Footer';
-import Todos from './todosRedux/Todos'
+import Todos from './todosState/Todos'
 import './custom.scss'; 
 import {Container}  from 'reactstrap';
 import {BrowserRouter, Switch, Route}  from 'react-router-dom';

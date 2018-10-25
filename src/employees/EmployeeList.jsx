@@ -17,10 +17,7 @@ export default class EmployeeList extends React.Component {
         ); 
     }
     
-    deleteHandler = async (id) => {
-      await EmployeeApi.deleteEmployee(id);  //Delete emp
-      this.componentDidMount();
-    }
+
 
     
     render() { 
@@ -29,7 +26,7 @@ export default class EmployeeList extends React.Component {
                 <h1>Employee List</h1>
                 <Button className="my-3" color="primary" tag={Link} to='/list/add' >Add Employee</Button>  
                 <EmployeeTable employees={this.state.employees}
-                               onDelete={this.deleteHandler} />
+                               />
             </>
         )
     }

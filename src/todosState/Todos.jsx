@@ -17,12 +17,6 @@ export default class Todos extends Component {
     });
   };
   
-  deleteTodo = (id) => {
-    let position = this.state.todos.findIndex((todo) => todo.id===id);
-    this.state.todos.splice(position,1)
-    this.setState({todos: this.state.todos});
-  }
-
   currentId=0
   addTodo = (todoText) => (
     this.setState((prevState) => (
@@ -66,8 +60,7 @@ export default class Todos extends Component {
       <VisibleTodoList 
               todos={this.state.todos}
               visibilityFilter={this.state.visibilityFilter} 
-              onToggleTodo={this.toggleTodo} 
-              onDelete={this.deleteTodo}   />
+              onToggleTodo={this.toggleTodo} />
      </div>
 
   );
